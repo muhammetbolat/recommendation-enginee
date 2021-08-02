@@ -53,12 +53,13 @@ cd recommendation-enginee/src/training_microservice_app/
 
 5. come-back to recommendation-enginee directory and find docker-compose.yml
 recommendation-enginee 
+```bash
 ├── README.md
 ├── docker-compose.yml
-
+```
 
 6.  run docker-compose build and wait a little time.
-```
+```bash
 docker-compose build
 ```
 
