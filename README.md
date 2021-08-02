@@ -63,12 +63,12 @@ recommendation-enginee
 docker-compose build
 ```
 
-6. run docker-compose up
+7. run docker-compose up
 ```bash
 docker-compose up
 ```
 
-7. Check logs on terminal. You will 3 application.
+8. Check logs on terminal. You will 3 application.
 - postgresql_1: to keep log, meta-data, events, scores, useful views and so on ...
     POSTGRES_USER=postgres
     POSTGRES_PASSWORD=123456
