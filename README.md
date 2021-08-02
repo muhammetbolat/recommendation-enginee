@@ -34,12 +34,22 @@ docker-compose up
 
 7. Check logs on terminal. You will 3 application.
 - postgresql_1: to keep log, meta-data, events, scores, useful views and so on ...
-- ai-training-microservice_1: working on http://0.0.0.0:7101/ you can connect on browser. You don't need any 3rd part application for Rest-API. 
+    POSTGRES_USER=postgres
+    POSTGRES_PASSWORD=123456
+    POSTGRES_DB=hb
+    LOCALHOST:5432
 
-![Alt text](/Users/tcmbolat/Desktop/training.png?raw=true "Title")
+- ai-training-microservice_1: working on http://0.0.0.0:7101/ you can connect on browser. You don't need any 3rd part application for Rest-API.
+  For training, you should wait around 3 minutes. You can also connect to DB to see logs, data and scores. 
 
+- ai-prediction-microservice_1: to finish training step, you can send products on http://0.0.0.0:9101/
+    Post request body: 
 
+    ```json
 
+    { "products": [ "HB001", "HB002", "HB003" ] }
+
+    ```
 
 ### Notes
 Port is changeable from configs in models
