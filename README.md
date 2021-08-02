@@ -11,11 +11,11 @@ Meta.json: metada of products.
 
 ## Design
 Recommendation enginee has 3 micro-services. 
-![header image](https://github.com/muhammetbolat/recommendation-enginee/blob/main/design.jpg)
+![header image](https://github.com/muhammetbolat/recommendation-enginee/blob/main/documents/design.jpg)
 
 ## Entity Relationship Diagram
 Pre-processed data and scores are stored in DB. Application logs are stored as well.
-![header image](https://github.com/muhammetbolat/recommendation-enginee/blob/main/Entity_Relationship_Diagram.jpg)
+![header image](https://github.com/muhammetbolat/recommendation-enginee/blob/main/documents/Entity_Relationship_Diagram.jpg)
 
 ### Steps
 1. Install docker on your machine
