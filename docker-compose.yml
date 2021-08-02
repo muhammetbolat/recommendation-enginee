@@ -51,3 +51,4 @@ services:
       - TZ=Europe/Istanbul
     depends_on:
       - postgresql
+      - ai-training-microservice
