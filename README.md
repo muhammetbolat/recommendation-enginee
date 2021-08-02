@@ -3,7 +3,7 @@
 This is a product recommendation engine microservices project.
 
 ## Getting Started
-Project has 2 micro-service which are used for training and prediction, and postgresql.
+Project have 2 micro-service which are used for training and prediction, and a postgresql. To create tables and view, I use open-source migration project which is name ALEMBIC. It automatically creates tables and views.
 
 ### Steps
 1. Install docker on your machine
