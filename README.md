@@ -20,6 +20,15 @@ git clone https://github.com/muhammetbolat/recommendation-enginee.git
 cd recommendation-enginee/
 ```
 4. Load events.json and meta.json files for training under the data folder.
+```bash
+
+├── README.md
+├── data
+│   ├── events.json
+│   └── meta.json
+├── docker-compose.yml
+└── src
+```
 
 5. run docker-compose build 
 ```bash
