@@ -8,19 +8,18 @@ Project has 2 micro-service which are used for training and prediction, and post
 ### Steps
 1. Install docker on your machine
 
-2. Load events.json and meta.json files for training under the data folder.
-
-3. Clone the repository from Github
+2. Clone the repository from Github
 
 ```bash
 git clone https://github.com/muhammetbolat/recommendation-enginee.git
 ```
 
-4. move to main working directory
+3. move to main working directory
 
 ```bash
 cd recommendation-enginee/
 ```
+4. Load events.json and meta.json files for training under the data folder.
 
 5. run docker-compose build 
 ```bash
