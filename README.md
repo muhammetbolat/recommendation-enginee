@@ -5,6 +5,14 @@ This is a product recommendation engine microservices project.
 ## Getting Started
 Project have 2 micro-service which are used for training and prediction, and a postgresql. To create tables and view, I use open-source migration project which is name ALEMBIC. It automatically creates tables and views.
 
+## Design
+Recommendation enginee has 3 micro-services. 
+![header image](https://github.com/muhammetbolat/recommendation-enginee/blob/main/design.jpg)
+
+## Entity Relationship Diagram
+Pre-processed data and scores are stored in DB. Application logs are stored as well.
+![header image](https://github.com/muhammetbolat/recommendation-enginee/blob/main/Entity_Relationship_Diagram.jpg)
+
 ### Steps
 1. Install docker on your machine
 
