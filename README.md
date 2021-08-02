@@ -5,6 +5,10 @@ This is a product recommendation engine microservices project.
 ## Getting Started
 Project have 2 micro-service which are used for training and prediction, and a postgresql. To create tables and view, I use open-source migration project which is name ALEMBIC. It automatically creates tables and views.
 
+## Dataset
+Events.json: events data of user's cart products.
+Meta.json: metada of products.
+
 ## Design
 Recommendation enginee has 3 micro-services. 
 ![header image](https://github.com/muhammetbolat/recommendation-enginee/blob/main/design.jpg)
