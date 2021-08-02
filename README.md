@@ -26,24 +26,39 @@ Pre-processed data and scores are stored in DB. Application logs are stored as w
 git clone https://github.com/muhammetbolat/recommendation-enginee.git
 ```
 
-3. move to main working directory
+3. move to training_microservice_app directory 
 
 ```bash
-cd recommendation-enginee/
+cd recommendation-enginee/src/training_microservice_app/
 ```
 4. Load events.json and meta.json files for training under the data folder.
+
+```bash
+./recommendation-enginee/src/training_microservice_app/data/events.json
+./recommendation-enginee/src/training_microservice_app/data/meta.json
+```
+
 ```bash
 
 ├── README.md
-├── data
-│   ├── events.json
-│   └── meta.json
 ├── docker-compose.yml
 └── src
+    ├── prediction_microservice_app
+    └── training_microservice_app
+        └── data
+            ├── events.json
+            └── meta.json
+  
 ```
 
-5. run docker-compose build 
-```bash
+5. come-back to recommendation-enginee directory and find docker-compose.yml
+recommendation-enginee 
+├── README.md
+├── docker-compose.yml
+
+
+6.  run docker-compose build and wait a little time.
+```
 docker-compose build
 ```
 
