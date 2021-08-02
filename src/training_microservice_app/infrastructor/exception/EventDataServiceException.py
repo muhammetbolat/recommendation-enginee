@@ -1,0 +1,2 @@
+class EventDataServiceException(Exception):
+    pass

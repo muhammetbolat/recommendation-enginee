@@ -1,0 +1,2 @@
+class PassedDayBasedRecommenderServiceException(Exception):
+    pass

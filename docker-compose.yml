@@ -1,0 +1,53 @@
+
+version: "3.8"
+
+services:
+  postgresql:
+    restart: always
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - DEBUG=false
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=123456
+      - POSTGRES_DB=hb
+      - PG_TRUST_LOCALNET=true
+    volumes:
+      - /var/lib/pdipostgresql/data
+
+  ai-training-microservice:
+    build:
+      context: src/training_microservice_app/
+      dockerfile: Dockerfile
+    ports:
+      - '7101:7101'
+    environment:
+      - APPLICATION_ENVIRONMENT=TEST
+      - DATABASE_TYPE=POSTGRESQL
+      - DATABASE_HOST=postgresql
+      - DATABASE_DATABASE=hb
+      - DATABASE_USER=postgres
+      - DATABASE_PASSWORD=123456
+      - DATABASE_PORT=5432
+      - TZ=Europe/Istanbul
+    depends_on:
+      - postgresql
+
+  ai-prediction-microservice:
+    build:
+      context: src/prediction_microservice_app/
+      dockerfile: Dockerfile
+    ports:
+      - '9101:9101'
+    environment:
+      - APPLICATION_ENVIRONMENT=TEST
+      - DATABASE_TYPE=POSTGRESQL
+      - DATABASE_HOST=postgresql
+      - DATABASE_DATABASE=hb
+      - DATABASE_USER=postgres
+      - DATABASE_PASSWORD=123456
+      - DATABASE_PORT=5432
+      - TZ=Europe/Istanbul
+    depends_on:
+      - postgresql

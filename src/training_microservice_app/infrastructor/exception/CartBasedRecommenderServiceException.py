@@ -1,0 +1,2 @@
+class CartBasedRecommenderServiceException(Exception):
+    pass

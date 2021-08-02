@@ -1,0 +1,2 @@
+class HybridRecommenderServiceException(Exception):
+    pass

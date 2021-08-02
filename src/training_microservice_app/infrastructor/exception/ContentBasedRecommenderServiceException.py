@@ -1,0 +1,2 @@
+class ContentBasedRecommenderServiceException(Exception):
+    pass
