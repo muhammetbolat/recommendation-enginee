@@ -113,7 +113,9 @@ docker-compose up
       }
     ```
     If you want to see more detailed result, you can use detailprediction controller.
+
     [POST] /api/recommender/detailprediction -> This method is endpoint of recommender prediction service with more detail.
+    
      Post request body: 
 
     ```json
