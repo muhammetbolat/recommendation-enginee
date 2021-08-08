@@ -88,7 +88,7 @@ docker-compose up
     ```json
       {
         "products": [
-          "HBV00000O2SCL", "HBV00000PQJWD", "HBV00000PLGGB"
+          "HBV00000A5LWZ", "HBV00000APN7J", "HBV00000QS9LY"
         ]
       }
     ```
@@ -99,20 +99,174 @@ docker-compose up
         "IsSuccess": true,
         "Message": "recommender succesfully finished.",
         "Result": [
-          "HBV00000NVZBI",
-          "HBV00000PQJVR",
-          "HBV00000NVZBW",
-          "HBV00000O3C6Z",
-          "HBV00000O2SDB",
-          "HBV00000O2SC9",
-          "HBV00000O2SCZ",
-          "HBV00000NVZBQ",
-          "HBV00000O2SES",
-          "HBV00000P7VSV"
+          "HBV00000NH2GZ",
+          "HBV00000NH2GV",
+          "HBV00000NH2H1",
+          "HBV00000QS9LY",
+          "HBV00000PVQBG",
+          "HBV00000APN7L",
+          "HBV00000QS9LW",
+          "HBV00000A5AUV",
+          "HBV00000SP74O",
+          "ZYBICN9286411"
         ]
       }
     ```
-  
+    If you want to see more detailed result, you can use detailprediction controller.
+    [POST] /api/recommender/detailprediction -> This method is endpoint of recommender prediction service with more detail.
+     Post request body: 
+
+    ```json
+      {
+        "products": [
+          "HBV00000A5LWZ", "HBV00000APN7J", "HBV00000QS9LY"
+        ]
+      }
+    ```
+
+    Response body:
+
+    ```json
+
+    {
+      "IsSuccess": true,
+      "Message": "recommender succesfully finished.",
+      "Result": [
+        {
+          "productId": "HBV00000NH2GZ",
+          "similarity_score": 0.8819171036881968,
+          "cart_count_score": 0.8076721360605379,
+          "last_carted_day_score": 0.5257731958762887,
+          "final_score": 0.7384541452083412,
+          "brand": "Carrefour",
+          "numberOfCart": 2156,
+          "passedDay": 46,
+          "category": "Su",
+          "subcategory": "Su",
+          "name": "Carrefour Su 5 lt"
+        },
+        {
+          "productId": "HBV00000NH2GV",
+          "similarity_score": 0.8819171036881968,
+          "cart_count_score": 0.780448169688676,
+          "last_carted_day_score": 0.5257731958762887,
+          "final_score": 0.7293794897510538,
+          "brand": "Carrefour",
+          "numberOfCart": 1825,
+          "passedDay": 46,
+          "category": "Su",
+          "subcategory": "Su",
+          "name": "Carrefour Su 0,5 lt"
+        },
+        {
+          "productId": "HBV00000NH2H1",
+          "similarity_score": 0.8819171036881968,
+          "cart_count_score": 0.7649697857535249,
+          "last_carted_day_score": 0.5257731958762887,
+          "final_score": 0.7242200284393369,
+          "brand": "Carrefour",
+          "numberOfCart": 1671,
+          "passedDay": 46,
+          "category": "Su",
+          "subcategory": "Su",
+          "name": "Carrefour Su 1,5 lt"
+        },
+        {
+          "productId": "HBV00000QS9LY",
+          "similarity_score": 1,
+          "cart_count_score": 0.526121469448034,
+          "last_carted_day_score": 0.5257731958762887,
+          "final_score": 0.6839648884414409,
+          "brand": "Carrefour",
+          "numberOfCart": 570,
+          "passedDay": 46,
+          "category": "Su",
+          "subcategory": "Su",
+          "name": "Carrefour Discount Su 10 lt"
+        },
+        {
+          "productId": "HBV00000PVQBG",
+          "similarity_score": 0.722501018689747,
+          "cart_count_score": 0.6060606060606061,
+          "last_carted_day_score": 0.5471698113207547,
+          "final_score": 0.6252438120237026,
+          "brand": "Garnier",
+          "numberOfCart": 20,
+          "passedDay": 48,
+          "category": "Sağlık ve Kozmetik",
+          "subcategory": "El, Yüz ve Vücut Bakımı",
+          "name": "Kağıt Yüz Maskesi Taze Karışım Hyaluronik Asit"
+        },
+        {
+          "productId": "HBV00000APN7L",
+          "similarity_score": 0.9459459459459456,
+          "cart_count_score": 0.35,
+          "last_carted_day_score": 0.5523809523809524,
+          "final_score": 0.616108966108966,
+          "brand": "Garnier",
+          "numberOfCart": 7,
+          "passedDay": 47,
+          "category": "Sağlık ve Kozmetik",
+          "subcategory": "El, Yüz ve Vücut Bakımı",
+          "name": "Garnier Skin Naturals Kömürlü Kağıt Yüz Maskesi Siyah Çay"
+        },
+        {
+          "productId": "HBV00000QS9LW",
+          "similarity_score": 1,
+          "cart_count_score": 0.3239399525941533,
+          "last_carted_day_score": 0.5204081632653061,
+          "final_score": 0.6147827052864865,
+          "brand": "Carrefour",
+          "numberOfCart": 246,
+          "passedDay": 47,
+          "category": "Su",
+          "subcategory": "Su",
+          "name": "Carrefour Discount Su 0,33 lt"
+        },
+        {
+          "productId": "HBV00000A5AUV",
+          "similarity_score": 0.7086463144289912,
+          "cart_count_score": 0.5517241379310345,
+          "last_carted_day_score": 0.5576923076923077,
+          "final_score": 0.6060209200174445,
+          "brand": "Garnier",
+          "numberOfCart": 16,
+          "passedDay": 46,
+          "category": "Sağlık ve Kozmetik",
+          "subcategory": "El, Yüz ve Vücut Bakımı",
+          "name": "GARNIER SKIN NATURALS ARINDIRICI MATCHA ÇAY MASKE 8ML"
+        },
+        {
+          "productId": "HBV00000SP74O",
+          "similarity_score": 0.6904757466825007,
+          "cart_count_score": 0.5666666666666667,
+          "last_carted_day_score": 0.5576923076923077,
+          "final_score": 0.604944907013825,
+          "brand": "Garnier",
+          "numberOfCart": 17,
+          "passedDay": 46,
+          "category": "Sağlık ve Kozmetik",
+          "subcategory": "El, Yüz ve Vücut Bakımı",
+          "name": "Saf Temiz Kömürlü 3İn1 150 ml"
+        },
+        {
+          "productId": "ZYBICN9286411",
+          "similarity_score": 0.77898083770452,
+          "cart_count_score": 0.42543859649122795,
+          "last_carted_day_score": 0.53,
+          "final_score": 0.5781398113985826,
+          "brand": "Pınar",
+          "numberOfCart": 97,
+          "passedDay": 47,
+          "category": "Kahvaltılık ve Süt",
+          "subcategory": "Süt",
+          "name": "Pınar Süt 200 Ml"
+        }
+      ]
+    }
+
+    ```
+
 
 ### Notes
 Port is changeable from configs in models
